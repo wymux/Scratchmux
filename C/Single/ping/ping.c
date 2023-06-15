@@ -65,10 +65,12 @@ main(int argc, char **argv)
 		printf("Error: You must be root.\n");
 		return 1;
 	}
+
 	if (argc < 2) {
 		printf("Usage: %s <hostname>\n", argv[0]);
 		return 1;
 	}
+
 	opt = parse_opt(argc, argv);
 	handle_opt(opt);
 	signal(SIGINT, sig_handler);
