@@ -1,0 +1,1 @@
+* Write a pointer version of `strcat(s, t)`, copies the string `t' and string `s`
