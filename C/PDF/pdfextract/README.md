@@ -1,0 +1,1 @@
+Send text of PDF to standard output

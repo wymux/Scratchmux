@@ -1,0 +1,1 @@
+Usage: pdfiototext FILENAME.pdf > FILENAME.txt
