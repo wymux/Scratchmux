@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      var max, num;
+      num = prompt("Enter new value, or 0 to end");
+      max = num;
+      while (num != 0) {
+	  if (parseInt(num) > parseInt(max)) {
+	      max = num;
+	  }
+	  num = prompt("enter new value, or 0 to end");
+      }
+      alert("Maximum is " + max);
+    </script>
+  </body>
+</html>
