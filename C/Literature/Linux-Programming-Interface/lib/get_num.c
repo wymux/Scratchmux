@@ -21,7 +21,7 @@ gnFail(const char *fname, const char *msg, const char *arg, const char *name)
 static long
 getNum(const char *fname, const char *arg, int flags, const char *name)
 {
-	long rs;
+	long res;
 	char *endptr;
 	int base;
 
@@ -32,7 +32,7 @@ getNum(const char *fname, const char *arg, int flags, const char *name)
 		(flags & GN_BASE_16) ? 16 : 10;
 
 	errno = 0;
-	res = strol(arg, &endptr, base);
+	res = strtol(arg, &endptr, base);
 	if (errno != 0)
 		gnFail(fname, "nonnumeric characters", arg, name);
 
@@ -58,7 +58,7 @@ getInt(const char *arg, int flags, const char *name)
 
 	res = getNum("getInt", arg, flags, name);
 	if (res > INT_MAX || res < INT_MIN)
-		gnFail(fname, "integer out of range", arg, name);
+		gnFail(name, "integer out of range", arg, name);
 
 	return res;
 }
