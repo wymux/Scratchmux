@@ -166,7 +166,7 @@ _mkstemp()
 {
 	FILE* f = tmpfile();
 	int fd;
-	char template[] = "/tmp/somestringXXXX"; 
+	char template[] = "/tmp/somestringXXXX";
 
 	fd = mkstemp(template);
 	if (fd == -1)
